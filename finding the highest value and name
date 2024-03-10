@@ -1,0 +1,31 @@
+n=int(input("enter a size of list:"))
+list=[]
+l=[]
+name_list=[]
+score_list=[]
+for i in range(n):
+    name=input("enter name: ")
+    name_list.append(name)
+    score=int(input("enter score: "))
+    score_list.append(score)
+    l.append([name,score])
+print(l)
+highest_mark=max(score_list)
+print("highest mark:{}".format(highest_mark))
+index2=[]
+length_list=len(score_list)
+for index,value in enumerate(score_list):
+    if value == highest_mark:
+        index_values=[]
+        index_values.append(index)
+        index2.append(index_values)
+    else:    
+        pass  
+main=[]
+for sublist in index2:
+    for item in sublist:
+       result=[]
+       result.append(name_list[item])
+       main.append(result)
+main.sort()
+print(f"The sorted order of alphabhet:{main}")
